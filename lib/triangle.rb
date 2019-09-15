@@ -8,7 +8,7 @@ class Triangle
     @length_3 = length_3
   end
 
-  def kind 
+  def kind
     if length_1 <= 0 || length_2 <= 0 || length_3 <= 0 || length_1 + length_2 <= length_3 || length_3 + length_2 <= length_1 || length_1 + length_3 <= length_2
       begin
         raise TriangleError
@@ -21,7 +21,7 @@ class Triangle
       :scalene
     end
   end
-  
+
   class TriangleError < StandardError
     def message
       "Invalid triangle."
